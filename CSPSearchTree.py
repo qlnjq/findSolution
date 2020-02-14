@@ -57,14 +57,12 @@ def loop(old, values, count):
             # print visited
             result = constraints(node, visited)
             if result == 0:
-                print node, i
                 loop(new, visited, count)
             elif result == 2:
                 count[0] += 1
-                print "reached, count = ", count
+                print visited.viewitems()
             else:
                 count[1] += 1
-                print node, i
 
 
 Letters = ["A", "B", "C", "D", "E", "F", "G", "H"]
